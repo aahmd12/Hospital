@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="laporan_dokter" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c4d5e6f7-a8b9-0c1d-2e3f-4a5b6c7d8e9f">
+    
+    <queryString>
+        <![CDATA[SELECT id_dokter, nama_dokter, no_hp, spesialis, alamat, jenis_kelamin FROM dokter ORDER BY id_dokter ASC]]>
+    </queryString>
+
+    <field name="id_dokter" class="java.lang.String"/>
+    <field name="nama_dokter" class="java.lang.String"/>
+    <field name="no_hp" class="java.lang.String"/>
+    <field name="spesialis" class="java.lang.String"/>
+    <field name="alamat" class="java.lang.String"/>
+    <field name="jenis_kelamin" class="java.lang.String"/>
+
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+
+    <title>
+        <band height="60" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="10" width="555" height="35" uuid="a1b2c3d4-e5f6-7a8b-9c0d-e1f2a3b4c5d6"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Segoe UI" size="20" isBold="true"/>
+                </textElement>
+                <text><![CDATA[LAPORAN DATA DOKTER]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="30" splitType="Stretch">
+            <rectangle>
+                <reportElement x="0" y="0" width="555" height="25" backcolor="#E0E0E0" uuid="f1e2d3c4-b5a6-9b8c-7d6e-5f4e3d2c1b0a"/>
+                <graphicElement>
+                    <pen lineWidth="0.0"/>
+                </graphicElement>
+            </rectangle>
+            
+            <staticText>
+                <reportElement x="5" y="0" width="65" height="25" uuid="11111111-a222-3333-4444-555555555555"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI" isBold="true"/></textElement>
+                <text><![CDATA[ID Dokter]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="75" y="0" width="115" height="25" uuid="22222222-b333-4444-5555-666666666666"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI" isBold="true"/></textElement>
+                <text><![CDATA[Nama Dokter]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="195" y="0" width="75" height="25" uuid="33333333-c444-5555-6666-777777777777"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI" isBold="true"/></textElement>
+                <text><![CDATA[Jenis Kelamin]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="275" y="0" width="85" height="25" uuid="44444444-d555-6666-7777-888888888888"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI" isBold="true"/></textElement>
+                <text><![CDATA[No. Telepon]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="365" y="0" width="105" height="25" uuid="55555555-e666-7777-8888-999999999999"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI" isBold="true"/></textElement>
+                <text><![CDATA[Spesialis]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="475" y="0" width="75" height="25" uuid="66666666-f777-8888-9999-000000000000"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI" isBold="true"/></textElement>
+                <text><![CDATA[Alamat]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="25" splitType="Stretch">
+            <textField>
+                <reportElement x="5" y="0" width="65" height="20" uuid="77777777-0000-1111-2222-333333333333"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI"/>
+            </textElement>
+                <textFieldExpression><![CDATA[$F{id_dokter}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="75" y="0" width="115" height="20" uuid="88888888-1111-2222-3333-444444444444"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI"/>
+            </textElement>
+                <textFieldExpression><![CDATA[$F{nama_dokter}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="195" y="0" width="75" height="20" uuid="99999999-2222-3333-4444-555555555555"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI"/>
+            </textElement>
+                <textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="275" y="0" width="85" height="20" uuid="00000000-3333-4444-5555-666666666666"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI"/>
+            </textElement>
+                <textFieldExpression><![CDATA[$F{no_hp}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="365" y="0" width="105" height="20" uuid="aaaaaaaa-4444-5555-6666-777777777777"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI"/>
+            </textElement>
+                <textFieldExpression><![CDATA[$F{spesialis}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement x="475" y="0" width="75" height="20" uuid="bbbbbbbb-5555-6666-7777-888888888888"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI"/>
+            </textElement>
+                <textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+            </textField>
+            
+            <line>
+                <reportElement x="0" y="22" width="555" height="1" forecolor="#CCCCCC" uuid="cccccccc-6666-7777-8888-999999999999"/>
+            </line>
+        </band>
+    </detail>
+
+    <pageFooter>
+        <band height="30" splitType="Stretch">
+            <textField>
+                <reportElement x="435" y="5" width="80" height="20" uuid="dddddddd-7777-8888-9999-000000000000"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle"><font fontName="Segoe UI"/></textElement>
+                <textFieldExpression><![CDATA["Halaman "+$V{PAGE_NUMBER}+" dari"]]></textFieldExpression>
+            </textField>
+            <textField evaluationTime="Report">
+                <reportElement x="515" y="5" width="40" height="20" uuid="eeeeeeee-8888-9999-0000-111111111111"/>
+                <textElement verticalAlignment="Middle"><font fontName="Segoe UI"/></textElement>
+                <textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+</jasperReport>

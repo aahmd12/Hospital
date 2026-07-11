@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pemeriksaan" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a7f8b9c0-d1e2-3f4a-5b6c-7d8e9f0a1b2c">
+	
+	<queryString>
+		<![CDATA[SELECT periksa.id_periksa, periksa.tgl_periksa, pasien.id_pasien, pasien.nama_pasien, dokter.nama_dokter, periksa.diagnosa, periksa.tindakan FROM periksa JOIN pasien ON pasien.id_pasien = periksa.id_pasien JOIN dokter ON dokter.id_dokter = periksa.id_dokter]]>
+	</queryString>
+
+	<field name="id_periksa" class="java.lang.String"/>
+	<field name="tgl_periksa" class="java.lang.String"/>
+	<field name="id_pasien" class="java.lang.String"/>
+	<field name="nama_pasien" class="java.lang.String"/>
+	<field name="nama_dokter" class="java.lang.String"/>
+	<field name="diagnosa" class="java.lang.String"/>
+	<field name="tindakan" class="java.lang.String"/>
+
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="555" height="30" uuid="e1d2c3b4-a5b6-4c7d-8e9f-0a1b2c3d4e5f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bahnschrift" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HOSPITAL MANAGEMENT SYSTEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="555" height="20" uuid="f2e3d4c5-b6a7-4d8e-9f0a-1b2c3d4e5f6a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bahnschrift" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Pemeriksaan Pasien]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="70" width="555" height="1" uuid="c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+
+	<pageHeader>
+		<band height="15" splitType="Stretch"/>
+	</pageHeader>
+
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="65" height="25" backcolor="#E6F2F2" uuid="d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Periksa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="65" y="0" width="70" height="25" backcolor="#E6F2F2" uuid="e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="135" y="0" width="60" height="25" backcolor="#E6F2F2" uuid="f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b0c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Pasien]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="195" y="0" width="95" height="25" backcolor="#E6F2F2" uuid="a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Pasien]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="290" y="0" width="95" height="25" backcolor="#E6F2F2" uuid="b8c9d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Dokter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="385" y="0" width="85" height="25" backcolor="#E6F2F2" uuid="c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Diagnosis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="470" y="0" width="85" height="25" backcolor="#E6F2F2" uuid="d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tindakan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="65" height="20" uuid="1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_periksa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="0" width="70" height="20" uuid="2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tgl_periksa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="0" width="60" height="20" uuid="3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_pasien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="0" width="95" height="20" uuid="4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_pasien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="95" height="20" uuid="5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_dokter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="385" y="0" width="85" height="20" uuid="6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnosa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="0" width="85" height="20" uuid="7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tindakan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="34" width="40" height="20" uuid="8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="34" width="80" height="20" uuid="9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Halaman "+$V{PAGE_NUMBER}+" dari"]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="34" width="195" height="20" uuid="0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

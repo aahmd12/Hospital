@@ -86,5 +86,5 @@ Run Project (F6)
 ---
 
 <p align="center">
-Made with by Hospital Management System Team
+Made with by Kelompok 1 | Hospital Management System
 </p>

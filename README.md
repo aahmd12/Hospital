@@ -6,12 +6,15 @@ Desktop application for hospital management built using **Java Swing**, **MySQL*
 
 ## ✨ Features
 
-- 🔐 Login System
-- 👤 Patient Management
+- 📊 Dashboard
+- 🛡️ Admin Management
 - 👨‍⚕️ Doctor Management
-- 📅 Booking Management
-- 💳 Payment Management
-- 📄 Print Report (JasperReports)
+- 💊 Medicine Management
+- 🩺 Medical Examination Management
+- 📝 Patient Registration Management
+- 👩‍⚕️ Nurse Management
+- 🏥 Room Management
+- 📄 Report Management (JasperReports)
 
 ---
 

@@ -78,13 +78,13 @@ Run Project (F6)
 
 | No | Name | NPM |
 |:--:|------------------------------|----------------|
-| 1 | Ahmad Zaen Purwanto | 202343501485 |
-| 2 | Dede Rochman | 202343501466 |
+| 1 | Dede Rochman | 202343501466 |
+| 2 | Ahmad Thamrin Assya'bani | 202343501469 |
 | 3 | Irsyad Dhiya Ramadhan | 202343501482 |
-| 4 | Ahmad Thamrin Assya'bani | 202343501469 |
-| 5 | Renaldy Fauzan | 202343501524 |
+| 4 | Ahmad Zaen Purwanto | 202343501485 |
+| 5 | Muhammad Amri | 202343501490 |
 | 6 | Muhammad Adithya Madlias | 202343501521 |
-| 7 | Muhammad Amri | 202343501490 |
+| 7 | Renaldy Fauzan | 202343501524 |
 
 ---
 
